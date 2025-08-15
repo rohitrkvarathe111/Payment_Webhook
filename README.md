@@ -7,6 +7,21 @@ This repository contains a **FastAPI** project that handles payment webhooks. It
 
 ## Repository Contents
 
+webhook/
+├─ main.py                 # FastAPI application
+├─ database.py             # Database setup
+├─ models.py               # SQLAlchemy models
+├─ schemas.py              # Pydantic schemas
+├─ utils.py                # Utility functions
+├─ zz_test.py              # HMAC signature testing script
+├─ payments.db             # SQLite database
+├─ requirements.txt        # Python dependencies
+├─ mock_payloads/          # Example webhook JSON payloads
+│   ├─ payment_authorized.json
+│   ├─ payment_captured.json
+│   └─ payment_failed.json
+└─ __pycache__/            # Python cache files
+
 
 
 ---
