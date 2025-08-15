@@ -9,6 +9,17 @@ This repository contains a **FastAPI** project that handles payment webhooks. It
 - Python 3.11+
 - Git
 
+
+---
+## Edge Cases & Details
+
+- Verifies HMAC signature for all webhooks; invalid signatures return 400.
+- Handles all event types (authorized, captured, failed) properly.
+- Stores events safely in SQLite, avoiding duplicates.
+- Returns meaningful errors for invalid payloads or non-existent payments.
+- Includes zz_test.py for local HMAC testing.
+- Structured for easy extension with new events or DB changes
+
 ---
 
 ## Setup Locally
