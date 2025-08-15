@@ -50,9 +50,7 @@ python zz_test.py mock_payloads/payment_authorized.json
 its return like this
 936617082e4ce4ba95e14b030924443aebb602c1d461d651521a50434ab5453a
 
-## Setup Locally
 
-1. **Clone the repository**
 
 ```bash
 # Send test webhook
