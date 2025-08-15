@@ -98,6 +98,11 @@ id (string) – Payment ID to retrieve events for.
 curl --location 'http://127.0.0.1:8000/payments/pay_0001/events'
 ```
 
+# Additional FastAPI Document
+```bash
+http://localhost:8000/docs
+```
+
 
 ### HMAC Signature Testing
 
