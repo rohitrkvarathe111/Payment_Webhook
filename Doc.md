@@ -112,3 +112,12 @@ It will return a HMAC signature you can use in the X-Razorpay-Signature header.
 - All webhook requests must include a valid HMAC signature.
 - The app uses SQLite (payments.db) to store received events.
 - Example payloads are available in mock_payloads/.
+
+# Edge Cases & Details
+
+- Verifies HMAC signature for all webhooks; invalid signatures return 400.
+- Handles all event types (authorized, captured, failed) properly.
+- Stores events safely in SQLite, avoiding duplicates.
+- Returns meaningful errors for invalid payloads or non-existent payments.
+- Includes zz_test.py for local HMAC testing.
+- Structured for easy extension with new events or DB changes
