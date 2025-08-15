@@ -1,0 +1,15 @@
+{
+  "event": "payment.authorized",
+  "payload": {
+    "payment": {
+      "entity": {
+        "id": "pay_014",
+        "status": "authorized",
+        "amount": 5000,
+        "currency": "INR"
+      }
+    }
+  },
+  "created_at": 1751889865,
+  "id": "evt_auth_019"
+}

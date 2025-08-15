@@ -1,0 +1,17 @@
+{
+  "event": "payment.failed",
+  "payload": {
+    "payment": {
+      "entity": {
+        "id": "pay_fail_001",
+        "status": "failed",
+        "amount": 5000,
+        "currency": "INR",
+        "error_code": "CARD_DECLINED",
+        "error_description": "The card was declined by the bank."
+      }
+    }
+  },
+  "created_at": 1751889865,
+  "id": "evt_fail_001"
+}

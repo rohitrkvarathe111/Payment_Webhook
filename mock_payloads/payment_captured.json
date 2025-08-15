@@ -1,0 +1,23 @@
+{
+  "event": "payment.captured",
+  "payload": {
+    "payment": {
+      "entity": {
+        "id": "pay_014",
+        "status": "captured",
+        "amount": 7500,
+        "currency": "INR",
+        "method": "card",
+        "description": "Test Payment Capture",
+        "card": {
+          "id": "card_001",
+          "last4": "4242",
+          "network": "Visa",
+          "type": "credit"
+        }
+      }
+    }
+  },
+  "created_at": 1751890465,
+  "id": "evt_captured_105"
+}
