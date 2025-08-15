@@ -4,28 +4,6 @@
 This repository contains a **FastAPI** project that handles payment webhooks. It supports multiple webhook events like `payment_authorized`, `payment_captured`, and `payment_failed` with HMAC signature verification.
 
 ---
-
-## Repository Contents
-
-webhook/
-├─ main.py                 # FastAPI application
-├─ database.py             # Database setup
-├─ models.py               # SQLAlchemy models
-├─ schemas.py              # Pydantic schemas
-├─ utils.py                # Utility functions
-├─ zz_test.py              # HMAC signature testing script
-├─ payments.db             # SQLite database
-├─ requirements.txt        # Python dependencies
-├─ mock_payloads/          # Example webhook JSON payloads
-│   ├─ payment_authorized.json
-│   ├─ payment_captured.json
-│   └─ payment_failed.json
-└─ __pycache__/            # Python cache files
-
-
-
----
-
 ## Prerequisites
 
 - Python 3.11+
@@ -58,7 +36,7 @@ uvicorn main:app --reload
 # to check go to this url
 http://127.0.0.1:8000/docs
 
-
+---
 ## Testing Webhooks
 # Generate HMAC signature
 python zz_test.py mock_payloads/payment_authorized.json
@@ -66,15 +44,15 @@ its return like this
 936617082e4ce4ba95e14b030924443aebb602c1d461d651521a50434ab5453a
 
 
-
+---
 ```bash
 # Send test webhook
-
+---
 curl --location 'http://127.0.0.1:8000/webhook/payments' \
 --header 'Content-Type: application/json' \
 --header 'X-Razorpay-Signature: 936617082e4ce4ba95e14b030924443aebb602c1d461d651521a50434ab5453a' \
 --data-binary '@/C:/Users/GTi2199/Desktop/webhook/mock_payloads/payment_authorized.json'
-
+---
 curl --location 'http://127.0.0.1:8000/payments/{id}/events'
 
 
